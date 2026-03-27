@@ -1,0 +1,27 @@
+# ─── RAW Photo Viewer — Python 依赖清单 ───────────────────────────────────────
+# Python >= 3.9 required
+#
+# Qt 后端：二选一，PySide6 优先（推荐），PyQt5 作为备选
+# 取消注释你实际使用的那一行：
+PySide6>=6.4
+# PyQt5>=5.15
+
+# ─── 核心依赖（必须） ─────────────────────────────────────────────────────────
+numpy>=1.23
+opencv-python>=4.7        # cv2：清晰度评分、图像处理
+Pillow>=9.4               # PIL：RAW 嵌入 JPEG 旋转、缩略图生成
+
+# ─── RAW 解码 ─────────────────────────────────────────────────────────────────
+rawpy>=0.18               # rawpy：读取 .nef / .cr2 / .cr3 / .arw / .orf 等
+
+# ─── YOLO 推理（可选，不安装则跳过融合评分功能） ─────────────────────────────
+# 需要 GPU 建议另行安装 torch+cu* 对应版本
+# ultralytics>=8.0
+
+# ─── 回收站支持（可选，不安装则直接永久删除） ────────────────────────────────
+send2trash>=1.8
+
+# ─── ExifTool（系统级工具，不在 pip 范围） ────────────────────────────────────
+# macOS:   brew install exiftool
+# Windows: https://exiftool.org/  （下载后加入 PATH）
+# Linux:   sudo apt install libimage-exiftool-perl
