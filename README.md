@@ -121,7 +121,8 @@ A: It's in `.raw_scores.csv` in the folder root.
 - Python 3.12+ (if running from source)
 - PySide6
 - rawpy
-- ExifTool (included)
+- ExifTool
+- ultralytics
 
 ## License
 
